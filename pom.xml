@@ -171,18 +171,7 @@ CSV files of various types.
           <tarLongFileMode>gnu</tarLongFileMode>
         </configuration>
       </plugin>
-      
-      <!-- Allow checkstyle to be run interactively; keep in sync with report config below -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${checkstyle.version}</version>
-        <configuration>
-          <configLocation>${basedir}/checkstyle.xml</configLocation>
-          <enableRulesSummary>false</enableRulesSummary>
-        </configuration>
-      </plugin>
-      <plugin>
+       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
@@ -210,7 +199,18 @@ CSV files of various types.
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>    
+      <!-- Allow checkstyle to be run interactively; keep in sync with report config below -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${checkstyle.version}</version>
+        <configuration>
+          <configLocation>${basedir}/checkstyle.xml</configLocation>
+          <enableRulesSummary>false</enableRulesSummary>
+        </configuration>
+      </plugin>
+ 
 
       <!-- We need to add our test data files to rat exclusions -->
       <!-- Needed for command-line access, e.g mvn apache-rat:rat and mvn apache-rat:check -->
