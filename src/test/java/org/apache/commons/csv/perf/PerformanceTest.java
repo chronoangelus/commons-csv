@@ -45,7 +45,7 @@ import org.junit.Test;
 @SuppressWarnings("boxing") // test code
 public class PerformanceTest {
 
-    private final int max = 10;
+    private final int max = 2;
 
     private static final File BIG_FILE = new File(System.getProperty("java.io.tmpdir"), "worldcitiespop.txt");
 
